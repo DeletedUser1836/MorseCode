@@ -59,6 +59,8 @@ int main()
                         continue;
                     }
 
+                    space = false;
+
                     char CrntLetter = NormAlf[j][0];
                     if (toupper(UsrInput[i]) == CrntLetter)
                     {
@@ -66,13 +68,17 @@ int main()
                         break;
                     }
                 }   
-             }
+            }
+
+            break;
         }
 
         default:
         {
             cout << "Wrong option was provided. Please run the script again.";
             exit(1);
+            break;
+            return 1;
         }
     }
 
