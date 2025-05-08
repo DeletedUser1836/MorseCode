@@ -33,7 +33,25 @@ int main()
             // decoding
             cout << "Please enter the message you want to dencode: " << endl;
             getline(cin, UsrInput);
-            // TODO
+            string currentCode = "";
+            cout << "This is \"" << UsrInput << "\" in plain text: " << endl;
+            for (unsigned long long i = 0; i < UsrInput.length(); i++)
+            {
+                bool found = false;
+                if(UsrInput[i]==' '||i=UsrInput.length())
+                {
+                    if (UsrInput[i] == '/')
+                    {
+                        cout << " ";
+                        continue;
+                    }
+
+                    for (unsigned long long j = 0; j < 39; j++)
+                    {
+                        
+                    }  
+                }
+            }
             break;
         }
         case 2:
@@ -41,13 +59,10 @@ int main()
             // encoding
             cout << "Please enter the message you want to encode: " << endl;
             getline(cin, UsrInput);
-
-            
-
             cout << "This is \"" << UsrInput << "\" in Morse Code: " << endl;
-            for (long long i = 0; i < UsrInput.length(); i++)
+            for (unsigned long long i = 0; i < UsrInput.length(); i++)
             {
-                for (long long j = 0; j < 39; j++)
+                for (unsigned long long j = 0; j < 39; j++)
                 {
                     if (UsrInput[i] == ' ')
                     {
@@ -69,7 +84,6 @@ int main()
                     }
                 }   
             }
-
             break;
         }
 
@@ -77,8 +91,8 @@ int main()
         {
             cout << "Wrong option was provided. Please run the script again.";
             exit(1);
-            break;
             return 1;
+            break;
         }
     }
 
