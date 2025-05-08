@@ -25,18 +25,25 @@ int main()
     switch(opt)
     {
         case 1:
+            //decoding
             cout << "Please enter the message you want to decode: " <<endl;
             cin  >> UsrInput;
+            //TODO
             break;
         case 2:
             //encoding
             cout << "Please enter the message you want to encode: "<<endl;
             cin >> UsrInput;
-            cout  << "This is '" << UsrInput << "' in Morse Code: "<<endl;
+            cout  << "This is \"" << UsrInput << "\" in Morse Code: "<<endl;
             for(long long i = 0; i < UsrInput.length(); i++)
             {
                 for(long long j = 0; j < 39; j++)
                 {
+                    if(UsrInput[i] == ' ')
+                    {
+                        cout << "/ ";
+                        continue;
+                    }
                     char CrntLetter = NormAlf[j][0];
                     if(toupper(UsrInput[i]) == CrntLetter)
                     {
